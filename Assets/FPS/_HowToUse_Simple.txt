@@ -1,0 +1,23 @@
+
+    DOWNLOAD
+    In Unity Package Manager
+    1. Cinemachine
+    2. Input System
+    3. In Project Settings/Player/OtherSettings/Input Handling: Both
+
+1. Open Initi Scene
+2. In Level Manager GameObject(Inside Init Scene), Add New Level/Scene There After InitScene And Run The Init Scene.
+
+
+If Init Scene Is Empty Or There Is No Init Scene,
+
+
+          -----HOW TO CREATE INIT SCENE-----
+
+1. Make Empty Scen
+2. Drag All Prefabs From FPS_ELY_Package/InitSceneFolder To The Empty Scene
+3. And There Is Your Init Scene.
+
+ANY PROBLEMS?
+
+If there is any problems, you probably just dont have textMeshPro Downloaded, its simple, in package manager
