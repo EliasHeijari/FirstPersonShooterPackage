@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class Enemy : MonoBehaviour, IDamageable
 {
-    private int health;
+    [SerializeField] private int health = 100;
     public int damage { get; private set; } = 8;
     public static event EventHandler OnEnemyDie;
     public NavMeshAgent navMeshAgent {get; private set;}
@@ -29,10 +29,13 @@ public class Enemy : MonoBehaviour, IDamageable
     }
 
     public void TakeDamage(int damage){
+        Debug.Log("Take damage: " + damage + " hp: " + health);
         health -= damage;
         if (health <= 0)
+        {
             health = 0;
             Die();
+        } 
     }
 
     private void Die()

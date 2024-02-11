@@ -50,8 +50,10 @@ public class WeaponHandling : MonoBehaviour
             if (WeaponSystem.Instance.Shoot(Camera.main.transform.position, Camera.main.transform.forward,
                 Player.Instance.transform.position, weapon.ShootingPoint.position, weapon.Data.shootingDistance, ShotImpactForce, out RaycastHit hit))
                 {
-                    // TODO: Damage Logic Here, IDamageable.Damage
-                     
+                    if (hit.collider.TryGetComponent(out IDamageable damageable))
+                    {
+                        damageable.TakeDamage(weapon.Data.damage);
+                    }
                 }
             
         }

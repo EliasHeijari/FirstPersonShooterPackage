@@ -36,11 +36,14 @@ public class EnemyWeaponHandling : MonoBehaviour
         if (Time.time >= shootingCooldown){
             shootingCooldown = Time.time + 1f/weapon.Data.fireRate;
             Debug.Log("Shoot");
-            if (WeaponSystem.Instance.Shoot(transform.position, transform.forward,
+            if (WeaponSystem.Instance.Shoot(weapon.ShootingPoint.position, transform.forward,
                 Player.Instance.transform.position, weapon.ShootingPoint.position, weapon.Data.shootingDistance, ShotImpactForce, out RaycastHit hit))
                 {
                     // TODO: Damage Logic Here, IDamageable.Damage
-                    Debug.Log("Hit");
+                    if (hit.collider.TryGetComponent(out IDamageable damageable))
+                    {
+                        damageable.TakeDamage(weapon.Data.damage);
+                    }
                 }
             
         }

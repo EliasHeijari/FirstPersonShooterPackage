@@ -389,13 +389,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d6d5f4e34888844b6bb63e105eb671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactEffect: {fileID: 1229796858978701783, guid: 86483d3cf252d7a4a85dddd8229ab759, type: 3}
-  bulletTrailPrefab: {fileID: 1076372297178575714, guid: fad36a6bf47afa54a8771968845f4566, type: 3}
-  trailTime: 0.1
   handTransform: {fileID: 6311753273836996678}
-  WeaponThrowForce: 300
+  weaponThrowForce: 300
   ShotImpactForce: 200
-  groundLayerName: Ground
 --- !u!114 &1695281503039942087
 MonoBehaviour:
   m_ObjectHideFlags: 0
