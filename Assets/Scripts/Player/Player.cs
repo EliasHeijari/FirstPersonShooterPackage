@@ -7,6 +7,8 @@ public class Player : MonoBehaviour, IDamageable
     public static Player Instance;
     public WeaponHandling WeaponHandling{get; private set;}
 
+    public Inventory inventory {get; private set;}
+
     private int health = 100;
 
     public int Health {
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour, IDamageable
 
     private void Awake(){
         WeaponHandling = GetComponent<WeaponHandling>();
+        inventory = GetComponent<Inventory>();
     }
 
     public void TakeDamage(int damage)
